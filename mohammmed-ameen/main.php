@@ -61,23 +61,37 @@ $ceu = array( "Italy"=>"Rome", "Luxembourg"=>"Luxembourg", "Belgium"=> "Brussels
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   </head>
   <body>
-
-  <table class="table">
+    
+    
+<table class="table">
   <thead>
     <tr>
-    <th scope="col">Country</th>
+      <th scope="col">Country</th>
+      <th scope="col">Capital</th>
     </tr>
   </thead>
-
   <tbody>
+    
     <tr>
-      <td>
-      <?php foreach($ceu as $value){?>
+      
+      
+      <th scope="row">
+      <?php foreach($ceu as $value=>$key){?>
       <li><?php echo strtoupper($value)." " ;?></li>
       <?php
       }?>
-    </td>
+      </th>
+
+      <td>
+      <?php foreach($ceu as $value=>$key){?>
+      <li><?php echo strtoupper($key)." " ;?></li>
+      <?php
+      }?>
+      </td>  
+      
+      
     </tr>
+
   </tbody>
 </table>
 
